@@ -30,9 +30,7 @@ Expanse uses [Lmod](https://lmod.readthedocs.io/en/latest/010_user.html), a Lua 
   * `module load cpu`  \(for cpu nodes\)
   * `module load gpu`  \(for gpu nodes\)     
 
-{% hint style="danger" %}
 #### Avoid loading both modules
-{% endhint %}
 
 ## Popular Lmod Commands
 
@@ -59,9 +57,7 @@ Lmod commands support _short-hand_ notation, for example:
 
 `foo ml -bar` == `module unload bar`
 
-{% hint style="info" %}
 SDSC Guidance: add module calls to your environment and batch scripts
-{% endhint %}
 
 #### Examples
 
@@ -113,9 +109,7 @@ $ module av
    D:  Default Module
 ```
 
-{% hint style="info" %}
 Module defaults are chosen based on Find First Rules due to Name/Version/Version modules found in the module tree. See [https://lmod.readthedocs.io/en/latest/060\_locating.html](https://lmod.readthedocs.io/en/latest/060_locating.html) for details.
-{% endhint %}
 
 Use `module spider` to find all possible modules and extensions.
 
@@ -258,9 +252,7 @@ You can override, and add to the standard set of login modules in two ways.
 1. Adding module commands to your personal startup files
 2. Using `module save` command
 
-{% hint style="info" %}
 Make sure that you always want the module loaded at login
-{% endhint %}
 
 For Bash: put the following block into your `~/.bash_profile` file:
 

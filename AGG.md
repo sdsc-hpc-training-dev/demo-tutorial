@@ -110,7 +110,7 @@ Contents:
 
 ![](../../.gitbook/assets/expanse_composable_systems.png)
 
-##### Composable Systems will support complex, distributed, workflows – making Expanse part of a larger CI ecosystem
+##### Composable Systems will support complex, distributed, workflows ï¿½ making Expanse part of a larger CI ecosystem
 
 * Bright Cluster Manager + Kubernetes
 * Core components developed via NSF- funded CHASE-CI \(NSF Award \# 1730158\), and the Pacific Research Platform \(NSF Award \# 1541349\)
@@ -146,11 +146,9 @@ The following Secure Shell \(ssh\) command may be used to log in to Expanse
 ssh <your_user>@login.expanse.sdsc.edu
 ```
 
-{% hint style="info" %}
 Details about how to access Expanse under different circumstances are described in the [Expanse User Guide](https://www.sdsc.edu/support/user_guides/expanse.html#access)
-{% endhint %}
 
-For instructions on how to use SSH, see [Connecting to SDSC HPC Systems Guide](https://github.com/sdsc-hpc-training-org/hpc-security). Below is the logon message – often called the _MOTD_ \(message of the day, located in /etc/motd\). This has not been implemented at this point on Expanse.
+For instructions on how to use SSH, see [Connecting to SDSC HPC Systems Guide](https://github.com/sdsc-hpc-training-org/hpc-security). Below is the logon message ï¿½ often called the _MOTD_ \(message of the day, located in /etc/motd\). This has not been implemented at this point on Expanse.
 
 ```text
 [user@localhost:~] ssh -Y expanse.sdsc.edu
@@ -199,9 +197,7 @@ login01
 
 We will clone the example code from [this repository](https://github.com/sdsc-hpc-training-org/expanse-101)
 
-{% hint style="info" %}
 You can create a test directory to hold the expanse example files \(optional\)
-{% endhint %}
 
 The example below will be for anonymous HTTPS downloads
 
@@ -244,9 +240,7 @@ drwxr-xr-x 2 user abc123       16 Jan 28 22:39 images
 /cm/shared/apps/sdsc/current/bin/expanse-client
 ```
 
-{% hint style="info" %}
 Use command `module load sdsc`to load`expanse-client`into environment
-{% endhint %}
 
 * **Example of Script Usage**
 
@@ -361,9 +355,7 @@ Expanse uses [Lmod](https://lmod.readthedocs.io/en/latest/010_user.html), a Lua 
   * `module load cpu`  \(for cpu nodes\)
   * `module load gpu`  \(for gpu nodes\)     
 
-{% hint style="danger" %}
 ###### Avoid loading both modules
-{% endhint %}
 
 #### Popular Lmod Commands
 
@@ -390,9 +382,7 @@ Lmod commands support _short-hand_ notation, for example:
 
 `foo ml -bar` == `module unload bar`
 
-{% hint style="info" %}
 SDSC Guidance: add module calls to your environment and batch scripts
-{% endhint %}
 
 ###### Examples
 
@@ -444,9 +434,7 @@ $ module av
    D:  Default Module
 ```
 
-{% hint style="info" %}
 Module defaults are chosen based on Find First Rules due to Name/Version/Version modules found in the module tree. See [https://lmod.readthedocs.io/en/latest/060\_locating.html](https://lmod.readthedocs.io/en/latest/060_locating.html) for details.
-{% endhint %}
 
 Use `module spider` to find all possible modules and extensions.
 
@@ -589,9 +577,7 @@ You can override, and add to the standard set of login modules in two ways.
 1. Adding module commands to your personal startup files
 2. Using `module save` command
 
-{% hint style="info" %}
 Make sure that you always want the module loaded at login
-{% endhint %}
 
 For Bash: put the following block into your `~/.bash_profile` file:
 
@@ -648,7 +634,7 @@ PATH=/cm/shared/apps/Slurm/current/sbin:/cm/shared/apps/Slurm/current/bin:/home/
 
 ##### Lmod warning "rebuild your saved collection"
 
-Lmod allows a user to save a bundle of modules as a collection using module save and module restore. This enables you to quickly get the same list of modules loaded if you tend to use the same modules over and over. With a new module scheme came a different system MODULEPATH. For this reason, if you have some module collections saved, you will experience the following warning: “Lmod Warning: The system MODULEPATH has changed: please rebuild your saved collection.” To solve this you need to remove your old collections and create them again.
+Lmod allows a user to save a bundle of modules as a collection using module save and module restore. This enables you to quickly get the same list of modules loaded if you tend to use the same modules over and over. With a new module scheme came a different system MODULEPATH. For this reason, if you have some module collections saved, you will experience the following warning: ï¿½Lmod Warning: The system MODULEPATH has changed: please rebuild your saved collection.ï¿½ To solve this you need to remove your old collections and create them again.
 
 * Too see the list of module collections that you currently have:
 
@@ -701,23 +687,16 @@ Users should evaluate their application for best compiler and library selection.
 
 Expanse GPU nodes have GNU, Intel, and PGI compilers available along with multiple MPI implementations \(OpenMPI, IntelMPI, and MVAPICH2\). The gcc/10.2.0, Intel, and PGI compilers have specific flags for the Cascade Lake architecture. Users should evaluate their application for best compiler and library selections.
 
-{% hint style="warning" %}
 login nodes are not the same as the GPU nodes, therefore all GPU codes must be compiled by requesting an interactive session on the GPU nodes.
-{% endhint %}
 
 ### Examples
 
 We include several hands-on examples that cover many of the cases in the table:
 
-{% page-ref page="../running-jobs/cpu-jobs/hello-mpi.md" %}
 
-{% page-ref page="../running-jobs/cpu-jobs/hello-openmp.md" %}
 
-{% page-ref page="../running-jobs/cpu-jobs/hello-hybrid.md" %}
 
-{% page-ref page="../running-jobs/gpu-jobs/hello-cuda.md" %}
 
-{% page-ref page="../running-jobs/gpu-jobs/hello-openacc.md" %}
 
 
 ---
@@ -732,9 +711,7 @@ The AMD Optimizing C/C++ Compiler \(AOCC\) is only available on CPU nodes. AMD c
 module load aocc
 ```
 
-{% hint style="info" %}
 For more information on the AMD compilers run \[flang \| clang \] -help
-{% endhint %}
 
 #### Suggested Compilers
 
@@ -762,9 +739,7 @@ module load intel/19.0.5.281
 module load intel-mkl/2020.3.279
 ```
 
-{% hint style="info" %}
 For more information on the Intel compilers run: \[ifort \| icc \| icpc\] -help
-{% endhint %}
 
 #### Suggested Compilers
 
@@ -774,9 +749,7 @@ For more information on the Intel compilers run: \[ifort \| icc \| icpc\] -help
 | C | icc | mpicc | icc -qopenmp | mpicc -qopenmp |
 | C++ | icpc | mpicxx | icpc -qopenmp | mpicxx -qopenmp |
 
-{% hint style="warning" %}
 For AVX2 support, compile with the -xHOST option. Note that -xHOST alone does not enable aggressive optimization, so compilation with -O3 is also suggested. The -fast flag invokes -xHOST, but should be avoided since it also turns on interprocedural optimization \(-ipo\), which may cause problems in some instances.
-{% endhint %}
 
 
 ---
@@ -792,9 +765,7 @@ module purge
 module load pgi mvapich2_ib
 ```
 
-{% hint style="info" %}
 For more information on the PGI compilers: man \[pgf90 \| pgcc \| pgCC\]
-{% endhint %}
 
 #### Suggested Compilers
 
@@ -804,9 +775,7 @@ For more information on the PGI compilers: man \[pgf90 \| pgcc \| pgCC\]
 | C | pgcc | mpicc | pgcc -mp | mpicc -mp |
 | C++ | pgCC | mpicxx | pgCC -mp | mpicxx -mp |
 
-{% hint style="warning" %}
  For AVX support, compile with `-fast`
-{% endhint %}
 
 
 ---
@@ -822,9 +791,7 @@ module purge
 module load gnu openmpi_ib
 ```
 
-{% hint style="info" %}
 For more information on the GNU compilers: man \[gfortran \| gcc \| g++\]
-{% endhint %}
 
 #### Suggested Compilers
 
@@ -834,9 +801,7 @@ For more information on the GNU compilers: man \[gfortran \| gcc \| g++\]
 | C | gcc | mpicc | gcc -fopenmp | mpicc -fopenmp |
 | C++ | g++ | mpicxx | g++ -fopenmp | mpicxx -fopenmp |
 
-{% hint style="warning" %}
 For AVX support, compile with -mavx. Note that AVX support is only available in version 4.7 or later, so it is necessary to explicitly load the gnu/4.9.2 module until such time that it becomes the default
-{% endhint %}
 
 
 
@@ -861,8 +826,8 @@ For AVX support, compile with -mavx. Note that AVX support is only available in 
 * CPUs all share same localized memory \(SHMEM\)
   * Coordination and communication between tasks via interprocessor communication \(IPC\) or virtual memory mappings.
 * May use: uniform or non-uniform memory access \(UMA or NUMA\); cache-only memory architecture \(COMA\).
-* Most common HPC API’s for using SHMEM:
-  * Portable Operating System Interface \(POSIX\); Open Multi-Processing \(OpenMP\) designed for parallel computing – best for multi-core computing.
+* Most common HPC APIï¿½s for using SHMEM:
+  * Portable Operating System Interface \(POSIX\); Open Multi-Processing \(OpenMP\) designed for parallel computing ï¿½ best for multi-core computing.
 
 ### Methods for Running Jobs
 
@@ -882,23 +847,19 @@ For AVX support, compile with -mavx. Note that AVX support is only available in 
 
 Use the [`srun`](slurm-resource-manager.md#common-commands)command to obtain nodes for real-time command line access to a compute node:
 
-{% tabs %}
-{% tab title="CPU" %}
+`CPU`
 ```text
 srun --partition=debug --qos=debug-normal --pty --account=abc123 \
      --nodes=1 --ntasks-per-node=128 --mem=248 -t 00:30:00 --wait=0 \
      --export=ALL /bin/bash
 ```
-{% endtab %}
 
-{% tab title="GPU" %}
+`GPU`
 ```
 srun --pty --account=abc123 --nodes=1 --ntasks-per-node=1 \
      --cpus-per-task=10  -p gpu-debug --gpus=1  \
      -t 00:10:00 /bin/bash
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Command Line Jobs
 
@@ -913,9 +874,7 @@ The login nodes are meant for compilation, file editing, simple data analysis, a
 
 Commands that you type into the terminal and run on the sytem are considered _jobs_ and they consume resources.
 
-{% hint style="warning" %}
 Computationally intensive jobs should be run only on the compute nodes and not the login nodes
-{% endhint %}
 
 
 ### Slurm Resource Manager
@@ -1011,8 +970,7 @@ $ scancel 8718049
 
 Below is an example of a batch script that prints our your environment on the compute node:
 
-{% tabs %}
-{% tab title="env-slurm.sb" %}
+`env-slurm.sb`
 ```bash
 ###!/bin/bash
 ###SBATCH --job-name="envinfo"
@@ -1028,35 +986,32 @@ Below is an example of a batch script that prints our your environment on the co
 module purge
 module load slurm
 module load cpu
-####  perform some basic unix commands
+####ï¿½ perform some basic unix commands
 echo "----------------------------------"
-echo "hostname= " `hostname` 
-echo "date= " `date` 
-echo "whoami= " `whoami` 
-echo "pwd= " `pwd` 
-echo "module list= " `module list` 
+echo "hostname= " `hostname`ï¿½
+echo "date= " `date`ï¿½
+echo "whoami= " `whoami`ï¿½
+echo "pwd= " `pwd`ï¿½
+echo "module list= " `module list`ï¿½
 echo "----------------------------------"
-echo "env= " `env` 
+echo "env= " `env`ï¿½
 echo "----------------------------------"
 ```
-{% endtab %}
 
-{% tab title="envinfo.108867.exp-6-56.out" %}
+`envinfo.108867.exp-6-56.out`
 ```bash
 ----------------------------------
-hostname=  exp-6-56
-date=  Wed Oct 7 23:45:43 PDT 2020
-whoami=  user
-pwd=  /home/user/DEMO/ENV_INFO
+hostname=ï¿½ exp-6-56
+date=ï¿½ Wed Oct 7 23:45:43 PDT 2020
+whoami=ï¿½ user
+pwd=ï¿½ /home/user/DEMO/ENV_INFO
 Currently Loaded Modules:
-  1) slurm/expanse/20.02.3   2) cpu/1.0
+ï¿½ 1) slurm/expanse/20.02.3 ï¿½ 2) cpu/1.0
 ----------------------------------
-env=  SLURM_MEM_PER_CPU=1024 LD_LIBRARY_PATH=/cm/shared/apps/Slurm/current...
+env=ï¿½ SLURM_MEM_PER_CPU=1024 LD_LIBRARY_PATH=/cm/shared/apps/Slurm/current...
 [SNIP]
 ----------------------------------
 ```
-{% endtab %}
-{% endtabs %}
 
 
 
@@ -1102,8 +1057,7 @@ sbatch hello_mpi_Slurm.sb
 
 This simple batch script will show you how to check your user environment and to also verify that your Slurm environment is working.
 
-{% tabs %}
-{% tab title="env-Slurm.sb" %}
+`env-Slurm.sb`
 ```bash
 ###!/bin/bash
 ###SBATCH --job-name="envinfo"
@@ -1135,8 +1089,6 @@ echo "----------------------------------"
 echo "expanse-client user -p: " `expanse-client user -p`
 echo "----------------------------------"
 ```
-{% endtab %}
-{% endtabs %}
 
 Submit the batch script and monitor until the job is allocated a node, and completes execution:
 
@@ -1151,9 +1103,7 @@ Submitted batch job 1088090
  1088090   compute  envinfo  user PD      0:00      1 (ReqNodeNotAvail,[SNIP]
 ```
 
-{% hint style="info" %}
 You can get an [Interactive CPU Node](../#interactive-jobs)
-{% endhint %}
 
 
 ---
@@ -1166,24 +1116,22 @@ You can get an [Interactive CPU Node](../#interactive-jobs)
 
 ##### Code
 
-{% tabs %}
-{% tab title="hello\_mpi.f90" %}
+`hello\_mpi.f90`
 ```text
-!  Fortran example  
-   program hello
-   include 'mpif.h'
-   integer rank, size, ierror, tag, status(MPI_STATUS_SIZE)
-   
-   call MPI_INIT(ierror)
-   call MPI_COMM_SIZE(MPI_COMM_WORLD, size, ierror)
-   call MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierror)
-   print*, 'node', rank, ': Hello world!'
-   call MPI_FINALIZE(ierror)
-   end
+!ï¿½ Fortran example ï¿½
+ï¿½ï¿½ program hello
+ï¿½ï¿½ include 'mpif.h'
+ï¿½ï¿½ integer rank, size, ierror, tag, status(MPI_STATUS_SIZE)
+ï¿½ ï¿½
+ï¿½ï¿½ call MPI_INIT(ierror)
+ï¿½ï¿½ call MPI_COMM_SIZE(MPI_COMM_WORLD, size, ierror)
+ï¿½ï¿½ call MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierror)
+ï¿½ï¿½ print*, 'node', rank, ': Hello world!'
+ï¿½ï¿½ call MPI_FINALIZE(ierror)
+ï¿½ï¿½ end
 ```
-{% endtab %}
 
-{% tab title="mpi-slurm.sb" %}
+`mpi-slurm.sb`
 ```bash
 ####!/bin/bash
 ####SBATCH --job-name="hellompi"
@@ -1208,12 +1156,8 @@ module load openmpi/4.0.4
 ##### Use srun to run the job
 srun --mpi=pmi2 -n 12 --cpu-bind=rank ./hello_mpi
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
 In the batch script we are using the GNU compiler, and asking for 2 CPU compute nodes, with 128 tasks per node for a total of 256 tasks. The name of job is set in line 2, while the name of the output file is set in line 3, where "**%j**" is the Slurm JOB\_ID, and and "**%N**" is the compute node name. You can name your outupt file however you wish, but it helpful to keep track of the JOB\_ID and node info in case something goes wrong.
-{% endhint %}
 
 ##### Compiling
 
@@ -1270,8 +1214,7 @@ drwxr-xr-x 8 user abc123     8 Oct  8 04:16 ..
 
 ##### Output
 
-{% tabs %}
-{% tab title="hellompi.667424,exp-2-28.out" %}
+`hellompi.667424,exp-2-28.out`
 ```text
 node           1 : Hello world!
 node           0 : Hello world!
@@ -1281,8 +1224,6 @@ node         254 : Hello world!
 node         188 : Hello world!
 node         246 : Hello world!
 ```
-{% endtab %}
-{% endtabs %}
 
 
 ---
@@ -1295,8 +1236,7 @@ node         246 : Hello world!
 
 ##### Code
 
-{% tabs %}
-{% tab title="hello\_openmp.f90" %}
+`hello\_openmp.f90`
 ```text
 PROGRAM OMPHELLO
       INTEGER TNUMBER
@@ -1309,9 +1249,8 @@ PROGRAM OMPHELLO
 
       END
 ```
-{% endtab %}
 
-{% tab title="openmp-slurm.sb" %}
+`openmp-slurm.sb`
 ```bash
 ####!/bin/bash
 ##### Example of OpenMP code running on a shared node
@@ -1338,12 +1277,8 @@ export OMP_NUM_THREADS=16
 ####Run the openmp job
 ./hello_openmp
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
 The script is loading the module stack, and setting the number of OMP threads
-{% endhint %}
 
 ##### Compiling
 
@@ -1380,8 +1315,7 @@ Submitted batch job 1088802
 
 ##### Output
 
-{% tabs %}
-{% tab title="hello\_openmp\_shared.1088802.exp-3-08.out" %}
+`hello\_openmp\_shared.1088802.exp-3-08.out`
 ```text
 HELLO FROM THREAD NUMBER =            14
 HELLO FROM THREAD NUMBER =            15
@@ -1400,12 +1334,8 @@ HELLO FROM THREAD NUMBER =            13
 HELLO FROM THREAD NUMBER =             3
 HELLO FROM THREAD NUMBER =             6
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
 The non-deterministic order of the thread numbers is normal for HPC systems
-{% endhint %}
 
 
 ---
@@ -1418,8 +1348,7 @@ The non-deterministic order of the thread numbers is normal for HPC systems
 
 ##### Code
 
-{% tabs %}
-{% tab title="hybrid.c" %}
+`hybrid.c`
 ```c
 ####include <stdio.h>
 ####include "mpi.h"
@@ -1446,9 +1375,8 @@ int main(int argc, char *argv[]) {
   MPI_Finalize();
 }
 ```
-{% endtab %}
 
-{% tab title="hybrid-slurm.sb" %}
+`hybrid-slurm.sb`
 ```bash
 ####!/bin/bash
 ####SBATCH --job-name="hellohybrid"
@@ -1472,8 +1400,6 @@ module load intel-mpi
 export OMP_NUM_THREADS=16
 mpirun -genv I_MPI_PIN_DOMAIN=omp:compact ./hello_hybrid
 ```
-{% endtab %}
-{% endtabs %}
 
 ##### Compiling
 
@@ -1504,8 +1430,7 @@ Submitted batch job 1089019
 
 ##### Output
 
-{% tabs %}
-{% tab title="hellohybrid.1089019.exp-10-07.out" %}
+`hellohybrid.1089019.exp-10-07.out`
 ```text
 Hello from thread 0 out of 16 from process 1 out of 2 on exp-10-07
 Hello from thread 14 out of 16 from process 1 out of 2 on exp-10-07
@@ -1540,8 +1465,6 @@ Hello from thread 10 out of 16 from process 1 out of 2 on exp-10-07
 Hello from thread 10 out of 16 from process 0 out of 2 on exp-10-07
 Hello from thread 15 out of 16 from process 0 out of 2 on exp-10-07
 ```
-{% endtab %}
-{% endtabs %}
 
 
 ### GPU Jobs
@@ -1566,9 +1489,7 @@ Hello from thread 15 out of 16 from process 0 out of 2 on exp-10-07
 * GPU nodes are allocated as a separate resource. The conversion rate is \(TBD\) Expanse Service Units \(SUs\) to 1 V100 GPU-hour.
 * GPU nodes are not the same as the login nodes
 
-{% hint style="danger" %}
 **GPU codes must be compiled by requesting an interactive session on a GPU nodes**
-{% endhint %}
 
 * Batch: GPU nodes can be accessed via either the "gpu" or the "gpu-shared" partitions: `#SBATCH -p gpu` or `#SBATCH -p gpu-shared`
 * Be sure to setup your CUDA environment for the compiler that you want to use   
@@ -1583,7 +1504,6 @@ module load gpu
 module load cuda
 ```
 
-{% hint style="warning" %}
 Expanse has several CUDA compiler libraries, and you can see them by running `module avail` \(once you have loaded the gpu module\)
 
 ```text
@@ -1592,7 +1512,6 @@ cuda10.2/blas/10.2.89     cuda10.2/profiler/10.2.89   sdsc/1.0
 cuda10.2/fft/10.2.89      cuda10.2/toolkit/10.2.89    xsede/xdusage/2.1-1
 cuda10.2/nsight/10.2.89   default-environment
 ```
-{% endhint %}
 
 ###### For OpenACC codes, you will need the PGI Compiler:
 
@@ -1665,8 +1584,7 @@ All compilng for GPU codes **must be done on an** [**interactive node**](../#int
 
 ##### Code
 
-{% tabs %}
-{% tab title="hello\_world\_gpu.cu" %}
+`hello\_world\_gpu.cu`
 ```c
 // Cuda By Example - By Sanders and Kudrot
 //
@@ -1689,9 +1607,8 @@ int main(void) {
 
 }
 ```
-{% endtab %}
 
-{% tab title="hello-world-gpu.sb" %}
+`hello-world-gpu.sb`
 ```bash
 ####!/bin/bash
 ####SBATCH --job-name="hello_world"
@@ -1712,8 +1629,6 @@ module load cuda10.2/toolkit/10.2.89
 ####Run the job
 ./hello_world
 ```
-{% endtab %}
-{% endtabs %}
 
 ##### Compiling
 
@@ -1761,13 +1676,10 @@ hello_world_cpu.cu                hello-world-gpu.sb
 
 ##### Output
 
-{% tabs %}
-{% tab title="hello\_world.1221237.exp-4-58.out" %}
+`hello\_world.1221237.exp-4-58.out`
 ```text
 Hello World!
 ```
-{% endtab %}
-{% endtabs %}
 
 
 ---
@@ -1780,8 +1692,7 @@ Hello World!
 
 ##### Code
 
-{% tabs %}
-{% tab title="laplace2d.c" %}
+`laplace2d.c`
 ```c
 /*
  *  Copyright 2012 NVIDIA Corporation
@@ -1871,9 +1782,8 @@ int laplace()
     printf(" total: %f s\n", runtime / 1000);
 }
 ```
-{% endtab %}
 
-{% tab title="timer.h" %}
+`timer.h`
 ```c
 /*
  *  Copyright 2012 NVIDIA Corporation
@@ -1943,9 +1853,8 @@ double GetTimer()
 
 ####endif // TIMER_H
 ```
-{% endtab %}
 
-{% tab title="openacc-gpu-shared.sb" %}
+`openacc-gpu-shared.sb`
 ```bash
 ####!/bin/bash
 ####SBATCH --job-name="OpenACC"
@@ -1966,8 +1875,6 @@ module load pgi
 ####Run the job
 ./laplace2d.openacc.exe
 ```
-{% endtab %}
-{% endtabs %}
 
 ##### Compiling
 
@@ -2043,8 +1950,7 @@ drwxr-xr-x 10 user use300    10 Jan 29 03:28 ..
 
 ##### Output
 
-{% tabs %}
-{% tab title="OpenACC.1093002.exp-7-57.out" %}
+`OpenACC.1093002.exp-7-57.out`
 ```text
 main()
 Jacobi relaxation Calculation: 4096 x 4096 mesh
@@ -2060,7 +1966,5 @@ Jacobi relaxation Calculation: 4096 x 4096 mesh
   900, 0.000269
  total: 1.029057 s
 ```
-{% endtab %}
-{% endtabs %}
 
 

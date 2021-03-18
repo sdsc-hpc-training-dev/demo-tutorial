@@ -10,9 +10,7 @@ The AMD Optimizing C/C++ Compiler \(AOCC\) is only available on CPU nodes. AMD c
 module load aocc
 ```
 
-{% hint style="info" %}
 For more information on the AMD compilers run \[flang \| clang \] -help
-{% endhint %}
 
 ## Suggested Compilers
 

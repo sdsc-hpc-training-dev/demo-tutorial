@@ -8,8 +8,7 @@ description: >-
 
 ## Code
 
-{% tabs %}
-{% tab title="hello\_mpi.f90" %}
+`hello\_mpi.f90`
 ```text
 !  Fortran example  
    program hello
@@ -23,9 +22,8 @@ description: >-
    call MPI_FINALIZE(ierror)
    end
 ```
-{% endtab %}
 
-{% tab title="mpi-slurm.sb" %}
+`mpi-slurm.sb`
 ```bash
 #!/bin/bash
 #SBATCH --job-name="hellompi"
@@ -50,12 +48,8 @@ module load openmpi/4.0.4
 ## Use srun to run the job
 srun --mpi=pmi2 -n 12 --cpu-bind=rank ./hello_mpi
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
 In the batch script we are using the GNU compiler, and asking for 2 CPU compute nodes, with 128 tasks per node for a total of 256 tasks. The name of job is set in line 2, while the name of the output file is set in line 3, where "**%j**" is the Slurm JOB\_ID, and and "**%N**" is the compute node name. You can name your outupt file however you wish, but it helpful to keep track of the JOB\_ID and node info in case something goes wrong.
-{% endhint %}
 
 ## Compiling
 
@@ -112,8 +106,7 @@ drwxr-xr-x 8 user abc123     8 Oct  8 04:16 ..
 
 ## Output
 
-{% tabs %}
-{% tab title="hellompi.667424,exp-2-28.out" %}
+`hellompi.667424,exp-2-28.out`
 ```text
 node           1 : Hello world!
 node           0 : Hello world!
@@ -123,6 +116,4 @@ node         254 : Hello world!
 node         188 : Hello world!
 node         246 : Hello world!
 ```
-{% endtab %}
-{% endtabs %}
 

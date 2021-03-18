@@ -39,23 +39,19 @@
 
 Use the [`srun`](slurm-resource-manager.md#common-commands)command to obtain nodes for real-time command line access to a compute node:
 
-{% tabs %}
-{% tab title="CPU" %}
+`CPU`
 ```text
 srun --partition=debug --qos=debug-normal --pty --account=abc123 \
      --nodes=1 --ntasks-per-node=128 --mem=248 -t 00:30:00 --wait=0 \
      --export=ALL /bin/bash
 ```
-{% endtab %}
 
-{% tab title="GPU" %}
+`GPU`
 ```
 srun --pty --account=abc123 --nodes=1 --ntasks-per-node=1 \
      --cpus-per-task=10  -p gpu-debug --gpus=1  \
      -t 00:10:00 /bin/bash
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Command Line Jobs
 
@@ -70,7 +66,5 @@ The login nodes are meant for compilation, file editing, simple data analysis, a
 
 Commands that you type into the terminal and run on the sytem are considered _jobs_ and they consume resources.
 
-{% hint style="warning" %}
 Computationally intensive jobs should be run only on the compute nodes and not the login nodes
-{% endhint %}
 

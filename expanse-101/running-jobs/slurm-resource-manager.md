@@ -91,8 +91,7 @@ $ scancel 8718049
 
 Below is an example of a batch script that prints our your environment on the compute node:
 
-{% tabs %}
-{% tab title="env-slurm.sb" %}
+`env-slurm.sb`
 ```bash
 #!/bin/bash
 #SBATCH --job-name="envinfo"
@@ -119,9 +118,8 @@ echo "----------------------------------"
 echo "env= " `env` 
 echo "----------------------------------"
 ```
-{% endtab %}
 
-{% tab title="envinfo.108867.exp-6-56.out" %}
+`envinfo.108867.exp-6-56.out`
 ```bash
 ----------------------------------
 hostname=  exp-6-56
@@ -135,8 +133,6 @@ env=  SLURM_MEM_PER_CPU=1024 LD_LIBRARY_PATH=/cm/shared/apps/Slurm/current...
 [SNIP]
 ----------------------------------
 ```
-{% endtab %}
-{% endtabs %}
 
 
 

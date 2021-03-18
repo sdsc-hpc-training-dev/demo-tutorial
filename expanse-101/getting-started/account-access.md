@@ -10,9 +10,7 @@ The following Secure Shell \(ssh\) command may be used to log in to Expanse
 ssh <your_user>@login.expanse.sdsc.edu
 ```
 
-{% hint style="info" %}
 Details about how to access Expanse under different circumstances are described in the [Expanse User Guide](https://www.sdsc.edu/support/user_guides/expanse.html#access)
-{% endhint %}
 
 For instructions on how to use SSH, see [Connecting to SDSC HPC Systems Guide](https://github.com/sdsc-hpc-training-org/hpc-security). Below is the logon message – often called the _MOTD_ \(message of the day, located in /etc/motd\). This has not been implemented at this point on Expanse.
 
@@ -63,9 +61,7 @@ login01
 
 We will clone the example code from [this repository](https://github.com/sdsc-hpc-training-org/expanse-101)
 
-{% hint style="info" %}
 You can create a test directory to hold the expanse example files \(optional\)
-{% endhint %}
 
 The example below will be for anonymous HTTPS downloads
 
@@ -108,9 +104,7 @@ drwxr-xr-x 2 user abc123       16 Jan 28 22:39 images
 /cm/shared/apps/sdsc/current/bin/expanse-client
 ```
 
-{% hint style="info" %}
 Use command `module load sdsc`to load`expanse-client`into environment
-{% endhint %}
 
 * **Example of Script Usage**
 

@@ -39,8 +39,7 @@ sbatch hello_mpi_Slurm.sb
 
 This simple batch script will show you how to check your user environment and to also verify that your Slurm environment is working.
 
-{% tabs %}
-{% tab title="env-Slurm.sb" %}
+`env-Slurm.sb`
 ```bash
 #!/bin/bash
 #SBATCH --job-name="envinfo"
@@ -72,8 +71,6 @@ echo "----------------------------------"
 echo "expanse-client user -p: " `expanse-client user -p`
 echo "----------------------------------"
 ```
-{% endtab %}
-{% endtabs %}
 
 Submit the batch script and monitor until the job is allocated a node, and completes execution:
 
@@ -88,7 +85,5 @@ Submitted batch job 1088090
  1088090   compute  envinfo  user PD      0:00      1 (ReqNodeNotAvail,[SNIP]
 ```
 
-{% hint style="info" %}
 You can get an [Interactive CPU Node](../#interactive-jobs)
-{% endhint %}
 

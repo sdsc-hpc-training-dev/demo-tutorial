@@ -11,9 +11,7 @@ module purge
 module load pgi mvapich2_ib
 ```
 
-{% hint style="info" %}
 For more information on the PGI compilers: man \[pgf90 \| pgcc \| pgCC\]
-{% endhint %}
 
 ## Suggested Compilers
 
@@ -23,7 +21,5 @@ For more information on the PGI compilers: man \[pgf90 \| pgcc \| pgCC\]
 | C | pgcc | mpicc | pgcc -mp | mpicc -mp |
 | C++ | pgCC | mpicxx | pgCC -mp | mpicxx -mp |
 
-{% hint style="warning" %}
  For AVX support, compile with `-fast`
-{% endhint %}
 

@@ -20,9 +20,7 @@
 * GPU nodes are allocated as a separate resource. The conversion rate is \(TBD\) Expanse Service Units \(SUs\) to 1 V100 GPU-hour.
 * GPU nodes are not the same as the login nodes
 
-{% hint style="danger" %}
 **GPU codes must be compiled by requesting an interactive session on a GPU nodes**
-{% endhint %}
 
 * Batch: GPU nodes can be accessed via either the "gpu" or the "gpu-shared" partitions: `#SBATCH -p gpu` or `#SBATCH -p gpu-shared`
 * Be sure to setup your CUDA environment for the compiler that you want to use   
@@ -37,7 +35,6 @@ module load gpu
 module load cuda
 ```
 
-{% hint style="warning" %}
 Expanse has several CUDA compiler libraries, and you can see them by running `module avail` \(once you have loaded the gpu module\)
 
 ```text
@@ -46,7 +43,6 @@ cuda10.2/blas/10.2.89     cuda10.2/profiler/10.2.89   sdsc/1.0
 cuda10.2/fft/10.2.89      cuda10.2/toolkit/10.2.89    xsede/xdusage/2.1-1
 cuda10.2/nsight/10.2.89   default-environment
 ```
-{% endhint %}
 
 #### For OpenACC codes, you will need the PGI Compiler:
 

@@ -15,9 +15,7 @@ module load intel/19.0.5.281
 module load intel-mkl/2020.3.279
 ```
 
-{% hint style="info" %}
 For more information on the Intel compilers run: \[ifort \| icc \| icpc\] -help
-{% endhint %}
 
 ## Suggested Compilers
 
@@ -27,7 +25,5 @@ For more information on the Intel compilers run: \[ifort \| icc \| icpc\] -help
 | C | icc | mpicc | icc -qopenmp | mpicc -qopenmp |
 | C++ | icpc | mpicxx | icpc -qopenmp | mpicxx -qopenmp |
 
-{% hint style="warning" %}
 For AVX2 support, compile with the -xHOST option. Note that -xHOST alone does not enable aggressive optimization, so compilation with -O3 is also suggested. The -fast flag invokes -xHOST, but should be avoided since it also turns on interprocedural optimization \(-ipo\), which may cause problems in some instances.
-{% endhint %}
 

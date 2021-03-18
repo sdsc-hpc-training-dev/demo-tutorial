@@ -8,8 +8,7 @@ description: >-
 
 ## Code
 
-{% tabs %}
-{% tab title="hybrid.c" %}
+`hybrid.c`
 ```c
 #include <stdio.h>
 #include "mpi.h"
@@ -36,9 +35,8 @@ int main(int argc, char *argv[]) {
   MPI_Finalize();
 }
 ```
-{% endtab %}
 
-{% tab title="hybrid-slurm.sb" %}
+`hybrid-slurm.sb`
 ```bash
 #!/bin/bash
 #SBATCH --job-name="hellohybrid"
@@ -62,8 +60,6 @@ module load intel-mpi
 export OMP_NUM_THREADS=16
 mpirun -genv I_MPI_PIN_DOMAIN=omp:compact ./hello_hybrid
 ```
-{% endtab %}
-{% endtabs %}
 
 ## Compiling
 
@@ -94,8 +90,7 @@ Submitted batch job 1089019
 
 ## Output
 
-{% tabs %}
-{% tab title="hellohybrid.1089019.exp-10-07.out" %}
+`hellohybrid.1089019.exp-10-07.out`
 ```text
 Hello from thread 0 out of 16 from process 1 out of 2 on exp-10-07
 Hello from thread 14 out of 16 from process 1 out of 2 on exp-10-07
@@ -130,6 +125,4 @@ Hello from thread 10 out of 16 from process 1 out of 2 on exp-10-07
 Hello from thread 10 out of 16 from process 0 out of 2 on exp-10-07
 Hello from thread 15 out of 16 from process 0 out of 2 on exp-10-07
 ```
-{% endtab %}
-{% endtabs %}
 

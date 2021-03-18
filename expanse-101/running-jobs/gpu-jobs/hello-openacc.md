@@ -8,8 +8,7 @@ description: >-
 
 ## Code
 
-{% tabs %}
-{% tab title="laplace2d.c" %}
+`laplace2d.c`
 ```c
 /*
  *  Copyright 2012 NVIDIA Corporation
@@ -99,9 +98,8 @@ int laplace()
     printf(" total: %f s\n", runtime / 1000);
 }
 ```
-{% endtab %}
 
-{% tab title="timer.h" %}
+`timer.h`
 ```c
 /*
  *  Copyright 2012 NVIDIA Corporation
@@ -171,9 +169,8 @@ double GetTimer()
 
 #endif // TIMER_H
 ```
-{% endtab %}
 
-{% tab title="openacc-gpu-shared.sb" %}
+`openacc-gpu-shared.sb`
 ```bash
 #!/bin/bash
 #SBATCH --job-name="OpenACC"
@@ -194,8 +191,6 @@ module load pgi
 #Run the job
 ./laplace2d.openacc.exe
 ```
-{% endtab %}
-{% endtabs %}
 
 ## Compiling
 
@@ -271,8 +266,7 @@ drwxr-xr-x 10 user use300    10 Jan 29 03:28 ..
 
 ## Output
 
-{% tabs %}
-{% tab title="OpenACC.1093002.exp-7-57.out" %}
+`OpenACC.1093002.exp-7-57.out`
 ```text
 main()
 Jacobi relaxation Calculation: 4096 x 4096 mesh
@@ -288,6 +282,4 @@ Jacobi relaxation Calculation: 4096 x 4096 mesh
   900, 0.000269
  total: 1.029057 s
 ```
-{% endtab %}
-{% endtabs %}
 

@@ -8,8 +8,7 @@ description: >-
 
 ## Code
 
-{% tabs %}
-{% tab title="hello\_world\_gpu.cu" %}
+`hello\_world\_gpu.cu`
 ```c
 // Cuda By Example - By Sanders and Kudrot
 //
@@ -32,9 +31,8 @@ int main(void) {
 
 }
 ```
-{% endtab %}
 
-{% tab title="hello-world-gpu.sb" %}
+`hello-world-gpu.sb`
 ```bash
 #!/bin/bash
 #SBATCH --job-name="hello_world"
@@ -55,8 +53,6 @@ module load cuda10.2/toolkit/10.2.89
 #Run the job
 ./hello_world
 ```
-{% endtab %}
-{% endtabs %}
 
 ## Compiling
 
@@ -104,11 +100,8 @@ hello_world_cpu.cu                hello-world-gpu.sb
 
 ## Output
 
-{% tabs %}
-{% tab title="hello\_world.1221237.exp-4-58.out" %}
+`hello\_world.1221237.exp-4-58.out`
 ```text
 Hello World!
 ```
-{% endtab %}
-{% endtabs %}
 

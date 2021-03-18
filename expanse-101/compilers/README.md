@@ -19,21 +19,14 @@ Users should evaluate their application for best compiler and library selection.
 
 Expanse GPU nodes have GNU, Intel, and PGI compilers available along with multiple MPI implementations \(OpenMPI, IntelMPI, and MVAPICH2\). The gcc/10.2.0, Intel, and PGI compilers have specific flags for the Cascade Lake architecture. Users should evaluate their application for best compiler and library selections.
 
-{% hint style="warning" %}
 login nodes are not the same as the GPU nodes, therefore all GPU codes must be compiled by requesting an interactive session on the GPU nodes.
-{% endhint %}
 
 ## Examples
 
 We include several hands-on examples that cover many of the cases in the table:
 
-{% page-ref page="../running-jobs/cpu-jobs/hello-mpi.md" %}
 
-{% page-ref page="../running-jobs/cpu-jobs/hello-openmp.md" %}
 
-{% page-ref page="../running-jobs/cpu-jobs/hello-hybrid.md" %}
 
-{% page-ref page="../running-jobs/gpu-jobs/hello-cuda.md" %}
 
-{% page-ref page="../running-jobs/gpu-jobs/hello-openacc.md" %}
 

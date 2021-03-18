@@ -8,8 +8,7 @@ description: >-
 
 ## Code
 
-{% tabs %}
-{% tab title="hello\_openmp.f90" %}
+`hello\_openmp.f90`
 ```text
 PROGRAM OMPHELLO
       INTEGER TNUMBER
@@ -22,9 +21,8 @@ PROGRAM OMPHELLO
 
       END
 ```
-{% endtab %}
 
-{% tab title="openmp-slurm.sb" %}
+`openmp-slurm.sb`
 ```bash
 #!/bin/bash
 ## Example of OpenMP code running on a shared node
@@ -51,12 +49,8 @@ export OMP_NUM_THREADS=16
 #Run the openmp job
 ./hello_openmp
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
 The script is loading the module stack, and setting the number of OMP threads
-{% endhint %}
 
 ## Compiling
 
@@ -93,8 +87,7 @@ Submitted batch job 1088802
 
 ## Output
 
-{% tabs %}
-{% tab title="hello\_openmp\_shared.1088802.exp-3-08.out" %}
+`hello\_openmp\_shared.1088802.exp-3-08.out`
 ```text
 HELLO FROM THREAD NUMBER =            14
 HELLO FROM THREAD NUMBER =            15
@@ -113,10 +106,6 @@ HELLO FROM THREAD NUMBER =            13
 HELLO FROM THREAD NUMBER =             3
 HELLO FROM THREAD NUMBER =             6
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
 The non-deterministic order of the thread numbers is normal for HPC systems
-{% endhint %}
 

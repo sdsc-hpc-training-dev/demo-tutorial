@@ -11,9 +11,7 @@ module purge
 module load gnu openmpi_ib
 ```
 
-{% hint style="info" %}
 For more information on the GNU compilers: man \[gfortran \| gcc \| g++\]
-{% endhint %}
 
 ## Suggested Compilers
 
@@ -23,9 +21,7 @@ For more information on the GNU compilers: man \[gfortran \| gcc \| g++\]
 | C | gcc | mpicc | gcc -fopenmp | mpicc -fopenmp |
 | C++ | g++ | mpicxx | g++ -fopenmp | mpicxx -fopenmp |
 
-{% hint style="warning" %}
 For AVX support, compile with -mavx. Note that AVX support is only available in version 4.7 or later, so it is necessary to explicitly load the gnu/4.9.2 module until such time that it becomes the default
-{% endhint %}
 
 
 
