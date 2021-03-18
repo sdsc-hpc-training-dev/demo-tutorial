@@ -3,6 +3,7 @@ description: Introduction to Running Jobs on the Expanse Supercomputer
 ---
 
 # Expanse 101
+[SDSC HPC Training Group](https://www.sdsc.edu/education_and_training/training_hpc.html)
 
 ## Prerequisite
 
