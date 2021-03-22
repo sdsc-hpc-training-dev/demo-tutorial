@@ -1,4 +1,5 @@
 ---
+sort: 1
 description: >-
   Simple tutorial to compile and run a MPI hello world program on Expanse CPU
   node

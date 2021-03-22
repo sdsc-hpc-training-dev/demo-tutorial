@@ -1,4 +1,5 @@
 ---
+sort: 3
 description: >-
   Simple tutorial to compile and run a hybrid (MPI + OpenMP) hello world program
   on Expanse CPU node
