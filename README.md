@@ -3,6 +3,14 @@ sort: 2
 description: Introduction to Running Jobs on the Expanse Supercomputer
 ---
 
+<hr>
+# TEST EMBEDDING AGENDA
+
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+        src="https://github.com/sdsc-hpc-training-dev/demo-tutorial/blob/main/demo_agenda" style="border: 1px solid black">
+</iframe>
+
+<hr>
 # Expanse 101 Demo
 [SDSC HPC Training Group](https://www.sdsc.edu/education_and_training/training_hpc.html)
 
